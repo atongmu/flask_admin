@@ -35,7 +35,7 @@ class BannerDefault(BaseMixinsModel):
 
 
 class PostersDefault(BaseMixinsModel):
-    """轮播图"""
+    """广告"""
     __tablename__ = "p_posters_default"
     name = Column(String(200), unique=True, nullable=False, comment=u"名称")
     url = Column(Text(), comment=u"图片链接")

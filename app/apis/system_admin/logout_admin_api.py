@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from flask_restful import Resource, reqparse
 from app.apis.api_constant import HTTP_OK
-from app.ext import multi_auth
 
 parse_base = reqparse.RequestParser()
-parse_base.add_argument("Authorization", location='headers', help="请输入请求参数")
+parse_base.add_argument("Authorization", location='headers', help=u"请输入请求参数")
 
 
 class AdminLogoutResource(Resource):

@@ -2,7 +2,6 @@
 from flask import g
 from flask_restful import Resource, fields, marshal_with
 from app.apis.api_constant import HTTP_OK
-from app.ext import multi_auth
 
 admin_fields = {
     "id": fields.Integer,
