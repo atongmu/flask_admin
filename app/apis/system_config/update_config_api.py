@@ -11,7 +11,7 @@ parse_base.add_argument("value", type=str, required=True, help=u"请输入请求
 
 
 class ConfigUpdateResource(Resource):
-    """站点配置注册"""
+    """站点配置修改"""
 
     def post(self):
         args = parse_base.parse_args()

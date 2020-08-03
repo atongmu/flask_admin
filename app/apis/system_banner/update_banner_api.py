@@ -11,7 +11,7 @@ parse_base.add_argument("desc", type=str, help=u"请输入请求参数")
 
 
 class BannerUpdateResource(Resource):
-    """轮播注册"""
+    """轮播修改"""
 
     def post(self):
         args = parse_base.parse_args()
