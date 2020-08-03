@@ -16,7 +16,7 @@ single_poster_fields = {
 }
 
 
-class PosterUpdateResource(Resource):
+class PosterAllResource(Resource):
     """广告列表"""
 
     @marshal_with(single_poster_fields)

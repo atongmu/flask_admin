@@ -16,7 +16,7 @@ single_config_fields = {
 }
 
 
-class ConfigALLResource(Resource):
+class ConfigAllResource(Resource):
     """站点配置列表"""
 
     @marshal_with(single_config_fields)

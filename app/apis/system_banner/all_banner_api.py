@@ -16,7 +16,7 @@ single_banner_fields = {
 }
 
 
-class BannerALLResource(Resource):
+class BannerAllResource(Resource):
     """轮播列表"""
 
     @marshal_with(single_banner_fields)
