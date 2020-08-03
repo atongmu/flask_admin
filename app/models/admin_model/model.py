@@ -16,6 +16,7 @@ class Managers(BaseModel):
     users_name = Column(String(200), unique=True, nullable=True)
     _password = Column(String(100), nullable=True)
     users_avatar = Column(Text(), nullable=True)
+    open_id = Column(Text(), nullable=True)
     is_administrator = Column(Boolean(), default=False, comment="是否是管理员")
     social_account = relationship("SocialAccount", backref="Managers")
 
