@@ -9,10 +9,9 @@ class ImageDefault(BaseMixinsModel):
     __tablename__ = "p_image_default"
     url = Column(Text(), comment=u"图片链接")
     path = Column(Text(), comment=u"图片地址")
-    desc = Column(String(200), comment=u"描述")
 
     def __repr__(self):
-        return self.desc
+        return self.url
 
     def delete_file(self):
         if os.path.exists(self.file_path):  # 如果文件存在
