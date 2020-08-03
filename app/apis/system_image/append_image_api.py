@@ -13,8 +13,8 @@ from app.models import ImageDefault
 from app.utils.common import allowed_photo, md5
 
 parse_base = reqparse.RequestParser()
-parse_base.add_argument('file', type=FileStorage, location='files', help="请选择文件")
-parse_base.add_argument('base64', help="请选择文件")
+parse_base.add_argument('file', type=FileStorage, location='files', help=u"请输入请求参数")
+parse_base.add_argument('base64', help=u"请输入请求参数")
 
 
 class ImageAppendResource(Resource):
@@ -54,7 +54,7 @@ class ImageAppendResource(Resource):
         image_default.url = image_path
         image_default.path = upload_path
         if not image_default.is_save():
-            abort(404, msg="图片注册失败")
+            abort(404, msg=u"图片注册失败")
         data = {
             "status": HTTP_OK,
             "msg": u"注册成功"
