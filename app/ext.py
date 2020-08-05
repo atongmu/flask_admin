@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from flask_cors import CORS
-from flask_httpauth import HTTPTokenAuth, MultiAuth
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -18,4 +17,3 @@ def init_ext(app):
     migrate.init_app(app, db)
     jwt.init_app(app)
     from app.utils import auth_jwt
-    # httpAuth方法
