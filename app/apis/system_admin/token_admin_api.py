@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from flask_jwt_extended import create_access_token, create_refresh_token
 from flask_restful import Resource, reqparse, abort
 from app.apis.api_constant import HTTP_OK
 from app.apis.system_admin.admin_utils import get_admin
@@ -20,11 +21,13 @@ class AdminTokenResource(Resource):
             abort(404, msg="用户不存在")
         if not manager.verify_password(pwd):
             abort(404, msg="用户名密码错误！")
-        # 返回token值
-        token = manager.generate_auth_token()
+        ret = {
+            'access_token': create_access_token(identity=manager.id),
+            'refresh_token': create_refresh_token(identity=manager.id)
+        }
         data = {
             "status": HTTP_OK,
             "msg": "获取成功",
-            "data": token.decode('ascii')
+            "data": ret
         }
         return data

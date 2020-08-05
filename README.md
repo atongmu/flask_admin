@@ -44,7 +44,7 @@ sudo killall uwsgi
 
 1. Flask-Cors 解决跨域问题
 2. Flask-RESTful 用于在前端与后台进行通信的一套规范。
-3. Flask-HTTPAuth 前后端通信验证
+3. Flask-JWT-Extended 前后端认证
 4. Flask-SQLAlchemy 数据库MySQL
 5. Flask-Migrate 数据库管理
 6. Flask-Script 命令行操作

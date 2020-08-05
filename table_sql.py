@@ -23,7 +23,7 @@ manager.add_command("db", MigrateCommand)
 # 创建管理员
 @manager.command
 def create_user():
-    managers = Managers(users_name="bing", password="888888", is_administrator=True)
+    managers = Managers(users_name="admin", password="888888", is_administrator=True)
     db.session.add(managers)
     try:
         db.session.commit()

@@ -17,6 +17,8 @@ class Config:
     DEBUG = False
     TESTING = False
     BABEL_DEFAULT_LOCALE = 'zh_Hans_CN'
+    JWT_SECRET_KEY = '2ku0Vm1XCR9OGW6c'
+    JWT_ACCESS_TOKEN_EXPIRES = 1000
     SECRET_KEY = '2ku0Vm1XCR9OGW6c'
 
 
