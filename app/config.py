@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import logging
-
 
 def get_db_url(dbinfo):
     engine = dbinfo.get('ENGINE') or 'sqlite'
@@ -38,8 +36,6 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_ECHO = True
-    # 设置日志等级
-    LOG_LEVEL = logging.DEBUG
 
 
 class DefaultConfig(Config):
@@ -56,7 +52,6 @@ class DefaultConfig(Config):
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
-    LOG_LEVEL = logging.WARNING
 
 
 class TestingConfig(Config):

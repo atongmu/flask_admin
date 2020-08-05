@@ -14,7 +14,6 @@ sys.setdefaultencoding("utf8")
 def create_app(config_class=None):
     app = Flask(__name__)
     app.config.from_object(config_class)
-
     # 跨域
     cors = CORS(app)
 
